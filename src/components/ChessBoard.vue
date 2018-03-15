@@ -78,9 +78,11 @@ export default {
   methods: {
     ...mapActions(['addMoveToHistory']),
     logClick({ file, rank }) {
-      this.currentSelection = `${file}${rank}`;
-      const dateTimeStamp = Date.now();
-      this.addMoveToHistory({ file, rank, dateTimeStamp });
+      if (this.currentSelection !== `${file}${rank}`) {
+        this.currentSelection = `${file}${rank}`;
+        const dateTimeStamp = Date.now();
+        this.addMoveToHistory({ file, rank, dateTimeStamp });
+      }
     },
   },
 };
