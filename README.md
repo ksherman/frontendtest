@@ -1,20 +1,29 @@
 # Chess.com - Front End Programming Challenge
 
-Welcome to the [Chess.com](https://chess.com) front end programming challenge!
+Hey! It's me! Kevin! And here is my submission for the Chess.com Front End Programming Challenge.
 
-# Instructions
-1. Fork this repository.
-2. Create a VueJS application that satisfies the requirements detailed below.
-3. Provide links to your fork of this repository and a live demo of your application.
+## Build/Setup
 
-# Application Requirements
-1. Create a page with a chessboard and a sidebar.
-2. On desktop devices the sidebar should be positioned to the right of the sidebar.
-3. On mobile devices the sidebar should be positioned below the chessboard.
-4. The chessboard should resize responsively to consume available space.
-5. Clicking a chessboard square should highlight the square.
-6. Keep track of which squares are clicked and the order in which they're clicked.
-7. Display the information collected from step 6 in the sidebar.
+```bash
+# install dependencies
+npm install
 
-# Questions & Feedback
-Please contact Chuck Haines (chaines@gmail.com) with any questions or feedback regarding this challenge.
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+## About the project
+
+I started with the excellent Vue CLI tool to build the project scaffolding. Additionally, I incorporated Vuex because it's such a joy to work with! Since we do have some need for basic state communication for components, Vuex is an excellent tool to reach for. Alternatively, Vue's event bus system is also easy to use and sufficient for basic state sharing.
+
+Otherwise, all the css was hand written, no UI framework used. The chess board itself uses CSS Grid which is just lovely to use. For the ranks and files, I went with a simple string, could open some quick options for internatonalization.
+
+## Questions & Feedback
+
+Please contact Kevin Sherman (kevin@kdsherm.com) with any questions or feedback regarding this submission.
