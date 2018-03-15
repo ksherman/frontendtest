@@ -37,8 +37,8 @@
         <div
           v-for="rank in ranksArray"
           :key="`label-rank-${rank}`"
-          class="gutter-label"
           :class="{ active: currentSelection.includes(rank) }"
+          class="gutter-label"
           v-html="rank" />
       </div>
     </div>
@@ -47,8 +47,8 @@
         <div
           v-for="file in filesArray"
           :key="`label-file-${file}`"
-          class="gutter-label"
           :class="{ active: currentSelection.includes(file) }"
+          class="gutter-label"
           v-html="file" />
       </div>
     </div>
