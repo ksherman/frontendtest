@@ -1,6 +1,26 @@
 .game {
   &-wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .game {
+    &-wrapper {
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
+    &-chessboard {
+      height: 100vh;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    &-movelog {
+      height: 100vh;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 }

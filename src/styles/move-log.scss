@@ -1,5 +1,21 @@
 .movelog {
   &-wrapper {
-    width: 20rem;
+    width: 20vw;
+    padding: 1rem 2rem;
+  }
+
+  &-list {
+    .log {
+      &-item {
+        padding: 1rem;
+      }
+      &-date {
+        color: lighten(black, 80%);
+      }
+      &-move {
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+    }
   }
 }
