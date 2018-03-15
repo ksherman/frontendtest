@@ -18,6 +18,9 @@
     }
 
     &-movelog {
+      background-color: lighten(black, 97%);
+      padding: 1rem 2rem;
+      width: $sidebar-width;
       height: 100vh;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;

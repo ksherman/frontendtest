@@ -1,6 +1,5 @@
 <template>
   <div class="movelog-wrapper">
-    <h1>Move Log!</h1>
     <div
       v-if="getMoveLog.length"
       class="movelog-list">
@@ -8,7 +7,7 @@
         v-for="log in getMoveLog"
         :key="`log-${log.dateTimeStamp}`"
         class="log-item">
-        <div class="log-date">{{ log.dateTimeStamp }}</div>
+        <div class="log-date">{{ log.dateTimeStamp | displayDate }}</div>
         <div class="log-move">{{ log.file }}{{ log.rank }}</div>
       </div>
     </div>
