@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <chess-board />
+    <game />
   </div>
 </template>
 
 <script>
-import ChessBoard from './components/ChessBoard';
+import Game from './components/Game';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    ChessBoard,
+    Game,
   },
 };
 </script>
