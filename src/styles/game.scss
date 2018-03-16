@@ -1,6 +1,12 @@
 .game {
+  &-landing {
+    height: 100vh;
+  }
+
   &-wrapper {
-    display: block;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100vw 1fr;
   }
 
   &-movelog {
@@ -14,12 +20,11 @@
     &-wrapper {
       display: grid;
       grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr;
     }
 
     &-chessboard {
       height: 100vh;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
     }
 
     &-movelog {

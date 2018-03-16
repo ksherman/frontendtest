@@ -1,5 +1,11 @@
 .chessboard {
   &-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-board {
     display: grid;
     grid-template-rows: 2rem auto 2rem;
     padding: 3rem;
@@ -9,13 +15,10 @@
     background-color: lighten(black, 20%);
     color: white;
     display: grid;
-    grid-template-columns:
-      2rem
-      repeat(8, calc((100vw - 38rem) / 8))
-      2rem;
+    grid-template-columns: 2rem repeat(8, 1fr) 2rem;
   }
 
-  &-board {
+  &-board-grid {
     display: grid;
     grid-template-columns: 2rem auto 2rem;
   }
@@ -67,12 +70,12 @@
     background-color: lighten(black, 70%);
     color: lighten(black, 80%);
     display: grid;
-    grid-template-rows: repeat(8, calc((100vw - 38rem) / 8));
+    grid-template-rows: repeat(8, 1fr);
   }
 
   &-rank {
     display: grid;
-    grid-template-columns: repeat(8, calc((100vw - 38rem) / 8));
+    grid-template-columns: repeat(8, 1fr);
     justify-items: center;
     align-items: center;
 
@@ -113,7 +116,7 @@
       color: white;
       transform: scale(1.1);
       transition: 400ms all;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 200;
       text-transform: uppercase;
       box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
@@ -124,21 +127,11 @@
 // tweaks for mobile layouts
 @media (max-width: 600px) {
   .chessboard {
-    &-file-gutter {
-      grid-template-columns:
-        2rem
-        repeat(8, calc((100vw - 10rem) / 8))
-        2rem;
+    &-wrapper {
+      height: 100%;
     }
-  }
-
-  .board {
-    &-grid {
-      grid-template-rows: repeat(8, calc((100vw - 10rem) / 8));
-    }
-
-    &-rank {
-      grid-template-columns: repeat(8, calc((100vw - 10rem) / 8));
+    &-board {
+      padding: 0;
     }
   }
 }
